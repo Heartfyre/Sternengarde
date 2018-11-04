@@ -1,10 +1,13 @@
 // main: style.less
 
+// General
 .us-main {
   background: @bgtwo;
   .box-shadow(0px, 0px, 62px, 0.75);
   margin-top: 180px;
 }
+
+// Slider
 .us-hero {
   height: calc(~"100vh - 180px");
 }
@@ -116,7 +119,72 @@
    border: 2px solid @bgsix;
  }
 }
+// Dark Section
+.us-darksection {
+  background-color: @bgone;
+}
+.us-darksection-nav {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  grid-template-rows: 116px;
+  align-items: center;
+}
+.us-darksection-nav h2 {
+  font-family: @uncial;
+  color: @txttwo;
+  .font-size(30);
+  margin-left: 100px;
+  margin-bottom: 0;
+}
+.us-darksection-nav-pills {
+  .uk-subnav-pill {
+    margin-bottom: 0;
+  }
+  .uk-subnav>*>:first-child {
+    .font-size(18);
+  }
+  .uk-subnav-pill>*>:first-child {
+    color: @txtone;
+    text-transform: capitalize;
+  }
+  .uk-subnav-pill>.uk-active>a {
+    background-color: @bgtwo;
+    color: @txtthree;
+  }
+}
 
+.us-news {
+  margin: 10px 100px !important;
+  padding-bottom: 20px;
+  .uk-card-secondary {
+    background-color: @bgone;
+    box-shadow: none;
+  }
+  .uk-card-small .uk-card-body {
+    padding: 20px 0;
+  }
+  .uk-card-small .uk-card-footer {
+    padding: 13px 0;
+    .uk-button {
+      .font-size(18);
+    }
+  }
+  .uk-card-title {
+    color: @txttwo !important;
+    .font-size(24);
+    line-height: 30px;
+  }
+  .uk-card-body p {
+    .font-size(16);
+    color: @txtone;
+    line-height: 24px;
+  }
+  .uk-slidenav {
+    transition: none;
+  }
+}
+
+// Slider Button
 .us-continue {
  align-self: center;
  justify-self: center;
@@ -130,12 +198,10 @@
 	50.01% { opacity: 0; }
 	100% { opacity: 0; }
 }
-
 .container {
   width: 80px;
   height: 80px;
 }
-
 .pulse-button {
   position: relative;
   margin: 0 auto;
@@ -157,7 +223,6 @@
 {
   -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
 }
-
 @-webkit-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(60, 58, 58, 0);}}
 @-moz-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(60, 58, 58, 0);}}
 @-ms-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(60, 58, 58, 0);}}
